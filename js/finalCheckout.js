@@ -6,7 +6,8 @@ if (!document.querySelector(".purcahse.email")) {
 }
 var options = {
 	key: "rzp_test_VRXPbBudsU0xFQ", // Enter the Key ID generated from the Dashboard
-	amount: "17000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+	//key: "rzp_live_UtV07y4Iq3FFX9",
+	amount: "170", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
 	currency: "INR",
 	name: "Himadri Saha",
 	description: "Payment for Aakul Brikhsho",
