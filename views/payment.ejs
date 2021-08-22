@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/11d589870a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"
+			integrity="sha512-xYHcfaQeUiKHs9YsHqjpyLaHnh+q7y8kYuOGdh5FkJeK7Z+dZct7Yoa7h+PtsrKRh03t8eJZuSeCN7b0dkrFwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<link rel="stylesheet" href="/payment.css" />
+		<title>Place Order</title>
+	</head>
+	<body>
+		<%-include('../views/navbar')%>
+		<div class="container">
+			<div class="order-details">
+				<div class="heading">Order Details</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-user-tie"></i>
+					</div>
+					<div class="input-space">
+						<input class="input name" type="text" placeholder="Name" />
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-at"></i>
+					</div>
+					<div class="input-space">
+						<input class="input email" type="email" placeholder="Email" />
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-phone"></i>
+					</div>
+					<div class="input-space">
+						<input class="input phone" type="email" placeholder="Phone" />
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-map-pin"></i>
+					</div>
+					<div class="input-space">
+						<input
+							class="input line1"
+							type="text"
+							placeholder="Address Line 1"
+						/>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-map-pin"></i>
+					</div>
+					<div class="input-space">
+						<input
+							class="input line2"
+							type="text"
+							placeholder="Address Line 2"
+						/>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-city"></i>
+					</div>
+					<div class="input-space">
+						<input class="input city" type="text" placeholder="City" />
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-location-arrow"></i>
+					</div>
+					<div class="input-space">
+						<select
+							class="input state"
+							type="text"
+							placeholder="State"
+							onchange="changeDistrict(this.value)"
+						>
+							<option disabled selected class="option default">State</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-location-arrow"></i>
+					</div>
+					<div class="input-space">
+						<select class="input district" type="text" placeholder="District">
+							<option disabled selected class="option default">District</option>
+						</select>
+					</div>
+				</div>
+				<div class="input-field">
+					<div class="input-logo">
+						<i class="fas fa-map"></i>
+					</div>
+					<div class="input-space">
+						<input class="input pincode" type="text" placeholder="Pin Code" />
+					</div>
+				</div>
+			</div>
+			<div class="terms-field">
+				By proceeding further, you are agreeing to the
+				<span class="terms-button" onclick="location.assign('/terms')"
+					>Terms and Conditions</span
+				>.
+			</div>
+			<div class="button-container">
+				<div class="button buy" onclick="placeOrder()">Place Order</div>
+				<span class="spinner"><i class="fas fa-circle-notch fa-spin"></i></span>
+			</div>
+		</div>
+		<%-include('../views/footer')%>
+	</body>
+	<script type="text/javascript" src="/states.json"></script>
+	<script src="/payment.js"></script>
+</html>

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	min-height: calc(100vh - 8rem);
+}
+.left-section,
+.right-section {
+	width: 40vw;
+}
+.left-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.book-pic {
+	width: 40vw;
+}
+.book-cover {
+	width: 30vw;
+}
+.book-details {
+	width: 30vw;
+	font-family: "Rubik", sans-serif;
+}
+.book-name {
+	font-size: 3rem;
+}
+.book-writter {
+	margin-top: 3px;
+	font-size: 1.5rem;
+}
+.book-price {
+	display: flex;
+	margin-top: 1rem;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.book-price > .content {
+	text-decoration: line-through;
+	font-weight: 400;
+}
+.book-price > diV {
+	width: 5rem;
+}
+.book-shipping {
+	margin-top: 5px;
+	font-size: 0.9rem;
+}
+.book-delivery {
+	margin-top: 0.7rem;
+}
+.book-description {
+	margin-top: 10px;
+	text-align: justify;
+}
+.button-container {
+	margin-top: 1rem;
+}
+.button {
+	font-size: 1.2rem;
+	width: 8rem;
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #4f4f4f;
+	color: #fff;
+	font-family: "Rubik", sans-serif;
+	border-radius: 5px;
+	user-select: none;
+}
+.button:hover {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+		rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+	background-color: #495057;
+	cursor: pointer;
+	user-select: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.book-details {
+		width: 40vw;
+	}
+}
+@media screen and (max-width: 760px) {
+	.left-section,
+	.right-section {
+		width: 100vw;
+	}
+	.left-sectionP {
+		height: 40vh;
+	}
+	.right-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: fit-content;
+		margin-bottom: 3rem;
+	}
+	.button-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.book-details {
+		width: 90vw;
+	}
+	.button {
+		width: 80vw;
+	}
+	.book-cover {
+		display: none;
+	}
+	.book-pic {
+		background-image: url("/bookimg.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 30vh;
+	}
+	.footer {
+		height: 4rem;
+	}
+}

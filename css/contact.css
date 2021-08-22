@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	min-height: calc(100vh - 8rem);
+}
+.contact {
+	display: flex;
+	width: 30vw;
+	align-items: center;
+	font-family: "Rubik", sans-serif;
+	margin-bottom: 20px;
+}
+.logo {
+	width: 5vw;
+	font-size: 3rem;
+}
+.content {
+	font-size: 1.5rem;
+}
+.content {
+	cursor: pointer;
+}
+.heading {
+	font-size: 1.7rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	font-family: "Rubik", sans-serif;
+}
+@media screen and (max-width: 760px) {
+	.contact {
+		width: 80vw;
+	}
+	.logo {
+		font-size: 2rem;
+		width: 20vw;
+	}
+	.content {
+		font-size: 1rem;
+	}
+}

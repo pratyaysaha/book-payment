@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	min-height: calc(100vh - 8rem);
+	margin-bottom: 2rem;
+}
+.heading {
+	font-size: 1.7rem;
+	text-align: center;
+	margin-bottom: 1rem;
+	font-family: "Rubik", sans-serif;
+	color: #0077b6;
+}
+.heading.small {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+.input-field {
+	display: flex;
+	width: 30vw;
+	border: 2px solid #4f4f4f;
+	height: 2rem;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	margin-bottom: 1rem;
+	border-radius: 10px;
+}
+.input-logo {
+	margin-right: 5px;
+	font-size: 1.3rem;
+}
+.input {
+	width: 27vw;
+	outline: none;
+	border: none;
+	font-size: 1.2rem;
+	background: transparent;
+	color: #000;
+}
+.payment-details {
+	font-family: "Rubik", sans-serif;
+	margin-top: 2rem;
+}
+.order {
+	width: 30vw;
+	display: flex;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+.order.discount,
+.order.shipping {
+	border-bottom: 1px solid #4f4f4f;
+	padding-bottom: 10px;
+}
+.order.total {
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: #9e2a2b;
+}
+.title,
+.content {
+	width: 15vw;
+}
+.title {
+	margin-left: 1rem;
+}
+.button-container {
+	margin-top: 1rem;
+}
+.button {
+	font-size: 1.2rem;
+	width: 30vw;
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #4f4f4f;
+	color: #fff;
+	font-family: "Rubik", sans-serif;
+	border-radius: 5px;
+	user-select: none;
+}
+.button:hover {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+		rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+	background-color: #495057;
+	cursor: pointer;
+	user-select: none;
+}
+.footer {
+	display: flex;
+	justify-content: space-around;
+	font-family: "Rubik", sans-serif;
+	font-size: 1.3rem;
+	align-items: center;
+	height: 3rem;
+}
+.spinner {
+	display: none;
+	font-size: 1.3rem;
+}
+::placeholder {
+	color: #4f4f4f;
+}
+.purchase-field {
+	font-family: "Rubik", sans-serif;
+	margin-bottom: 1rem;
+}
+.purchase {
+	font-size: 1.2rem;
+	width: 30vw;
+}
+.purchase-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #9e2a2b;
+}
+.terms-field {
+	margin-top: 1.5rem;
+	font-family: "Rubik", sans-serif;
+	font-size: 0.7rem;
+}
+.terms-button {
+	color: #0077b6;
+	user-select: none;
+}
+.terms-button:hover {
+	cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+	.container {
+		margin-bottom: 2rem;
+	}
+}
+@media screen and (max-width: 760px) {
+	.container {
+		margin-bottom: 2rem;
+	}
+	.input-field {
+		width: 80vw;
+	}
+	.input {
+		width: 65vw;
+	}
+	.input-logo {
+		font-size: 1.2rem;
+	}
+	.button {
+		width: 80vw;
+	}
+	.purchase {
+		width: 80vw;
+	}
+	.order {
+		width: 80vw;
+	}
+	.title {
+		width: 50vw;
+	}
+	.terms-field {
+		width: 90vw;
+		text-align: center;
+	}
+}

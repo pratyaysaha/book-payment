@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/11d589870a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<link rel="stylesheet" href="/index.css" />
+		<title>Aakul Briksha</title>
+	</head>
+	<body>
+		<%-include('../views/navbar')%>
+		<div class="container">
+			<div class="left-section">
+				<div class="book-pic">
+					<img src="/bookimg.png" class="book-cover" alt="Book Cover" />
+				</div>
+			</div>
+			<div class="right-section">
+				<div class="book-details">
+					<div class="book-name">Aakul Briksha</div>
+					<div class="book-writter">Dr Himadri Saha</div>
+					<div class="book-price">
+						<div class="title">MRP</div>
+						<div class="content">₹150</div>
+						<div class="content-no">₹120</div>
+					</div>
+					<div class="book-shipping">
+						<div class="content">+ ₹50 shipping charges</div>
+					</div>
+					<div class="book-delivery">Delivery by Courier Service</div>
+					<div class="book-description">
+						"AAKUL BRIKSHA" my frist book on poems is obviously the germination
+						of my feelings that has emanated in my mind from the intimate
+						interactions society has with me and surroundings. These feelings
+						imprint an indelible vibrations somewhere in the backdrop of my
+						existence. The poems in "AAKUL BRIKSHA" are the reflections of such
+						resonance.
+					</div>
+					<div class="button-container">
+						<div
+							class="button buy"
+							onclick="window.location.assign(`${window.location.origin}/purchase`)"
+						>
+							Buy Now
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%-include('../views/footer')%>
+	</body>
+</html>

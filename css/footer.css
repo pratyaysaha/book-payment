@@ -1,0 +1,25 @@
+.footer {
+	display: flex;
+	justify-content: space-around;
+	font-family: "Rubik", sans-serif;
+	font-size: 1.3rem;
+	align-items: center;
+	height: 3rem;
+}
+.social {
+	user-select: none;
+}
+.social:hover {
+	cursor: pointer;
+	color: #0077b6;
+}
+@media screen and (max-width: 760px) {
+	.footer {
+		height: 4rem;
+		font-size: 1.1rem;
+	}
+	.social {
+		color: #0077b6;
+		font-size: 1.4rem;
+	}
+}

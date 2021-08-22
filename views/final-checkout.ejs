@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/11d589870a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"
+			integrity="sha512-xYHcfaQeUiKHs9YsHqjpyLaHnh+q7y8kYuOGdh5FkJeK7Z+dZct7Yoa7h+PtsrKRh03t8eJZuSeCN7b0dkrFwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+		<link rel="stylesheet" href="/payment.css" />
+		<title>Place Order</title>
+	</head>
+	<body>
+		<%-include('../views/navbar')%>
+		<div class="container">
+			<input class="input orderId" type="hidden" value="<%=data.orderId%>" />
+			<div class="order-details">
+				<div class="heading">Order Details</div>
+				<div class="purchase-field">
+					<div class="purchase-title">Name</div>
+					<div class="input-space">
+						<div class="purchase name"><%=data.name%></div>
+					</div>
+				</div>
+				<%if(data.email){%>
+				<div class="purchase-field">
+					<div class="purchase-title">Email</div>
+					<div class="input-space">
+						<div class="purchase email"><%=data.email%></div>
+					</div>
+				</div>
+				<%}%>
+				<div class="purchase-field">
+					<div class="purchase-title">Phone</div>
+					<div class="input-space">
+						<div class="purchase phone"><%=data.phone%></div>
+					</div>
+				</div>
+				<div class="purchase-field">
+					<div class="purchase-title">Address</div>
+					<div class="input-space">
+						<div class="purchase address line1"><%=data.address.line1%></div>
+						<%if(data.address.line2){%>
+						<div class="purchase address line2"><%=data.address.line2%></div>
+						<%}%>
+						<div class="purchase address city"><%=data.address.city%></div>
+						<div class="purchase address district">
+							<%=data.address.district%>
+						</div>
+						<div class="purchase address state"><%=data.address.state%></div>
+						<div class="purchase address pincode">
+							<%=data.address.pincode%>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment-details">
+				<div class="heading small">Payment Details</div>
+				<div class="order mrp">
+					<div class="title">MRP</div>
+					<div class="content">₹150</div>
+				</div>
+				<div class="order discount">
+					<div class="title">Discount</div>
+					<div class="content">- ₹30</div>
+				</div>
+				<div class="order subtotal">
+					<div class="title">Sub-total</div>
+					<div class="content">₹120</div>
+				</div>
+				<div class="order shipping">
+					<div class="title">Shipping</div>
+					<div class="content">+ ₹50</div>
+				</div>
+				<div class="order total">
+					<div class="title">Total</div>
+					<div class="content">₹170</div>
+				</div>
+			</div>
+			<div class="button-container">
+				<div class="button pay">Procced to payment</div>
+				<span class="spinner"><i class="fas fa-circle-notch fa-spin"></i></span>
+			</div>
+		</div>
+		<%-include('../views/footer')%>
+	</body>
+	<script src="/finalCheckout.js"></script>
+</html>

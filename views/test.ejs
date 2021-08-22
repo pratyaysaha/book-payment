@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Test payment</title>
+	</head>
+	<body>
+		<div>
+			<button class="checkout" onclick="checkout()">Checkout</button>
+		</div>
+	</body>
+	<script>
+		const data = {
+			name: "Pratyay Saha",
+			phone: "7595883211",
+			line1: "306/A NS Road",
+			line2: "Sarkarpara",
+			state: "West Bengaal",
+			district: "Hooghly",
+			city: "Sheoraphuli",
+			pincode: "712223",
+		}
+		const checkout = () => {
+			const url = `${window.location.origin}/api/order`
+			fetch(url, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json;charset=utf-8",
+				},
+				body: JSON.stringify(data),
+			})
+				.then((res) => {
+					if (res.status === 201) {
+						location.assign("/test-payment")
+					}
+					return res.json()
+				})
+				.then((back) => {
+					console.log(res)
+				})
+		}
+	</script>
+</html>

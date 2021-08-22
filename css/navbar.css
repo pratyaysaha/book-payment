@@ -1,0 +1,25 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	/* width: 100vw; */
+	height: 5rem;
+}
+.left {
+	display: flex;
+	align-items: center;
+	user-select: none;
+}
+.left:hover {
+	cursor: pointer;
+}
+.left > div {
+	margin-left: 1.3rem;
+}
+.nav-logo {
+	font-size: 1.7rem;
+}
+.nav-text {
+	font-family: "Rubik", sans-serif;
+	font-weight: 600;
+	font-size: 2rem;
+}

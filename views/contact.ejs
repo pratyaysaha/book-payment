@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/11d589870a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<link rel="stylesheet" href="/contact.css" />
+		<title>Contact Us</title>
+	</head>
+	<body>
+		<%-include('../views/navbar')%>
+		<div class="container">
+			<div class="heading">Contact Me</div>
+			<div class="contact address">
+				<div class="logo"><i class="fas fa-map-marked"></i></div>
+				<div class="content">
+					306/A N.S Road, Sarkarpara<br />Hooghly, West Bengal<br />712223
+				</div>
+			</div>
+			<div class="contact phone">
+				<div class="logo"><i class="fas fa-phone"></i></div>
+				<div class="content" onclick="window.open('tel:9331883488')">
+					9331883488
+				</div>
+			</div>
+			<div class="contact email">
+				<div class="logo">
+					<i class="fas fa-at"></i>
+				</div>
+				<div
+					class="content"
+					onclick="window.open('mailto:himadrisaha555@gmail.com')"
+				>
+					himadrisaha555@gmail.com
+				</div>
+			</div>
+		</div>
+		<%-include('../views/footer')%>
+	</body>
+</html>

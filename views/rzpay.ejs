@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="text" value="<%=data.name%>" class="input name" />
+		<input type="text" value="<%=data.phone%>" class="input phone" />
+		<input type="text" value="<%=data.orderId%>" class="input orderId" />
+		<button id="rzp-button1">Pay</button>
+	</body>
+	<script>
+		var options = {
+			key: "rzp_test_VRXPbBudsU0xFQ", // Enter the Key ID generated from the Dashboard
+			amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+			currency: "INR",
+			name: "Himadri Saha",
+			description: "Test Transaction",
+			image: "https://www.logodesign.net/logo/crane-truck-with-hook-4110ld.png",
+			order_id: document.querySelector("input.orderId").value, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+			callback_url: "/api/order/afterpayment",
+			prefill: {
+				name: document.querySelector("input.name").value,
+				email: "pratyaysaha@outlook.com",
+				contact: document.querySelector("input.phone").value,
+			},
+			theme: {
+				color: "#3399cc",
+			},
+		}
+		var rzp1 = new Razorpay(options)
+		document.getElementById("rzp-button1").onclick = function (e) {
+			rzp1.open()
+			e.preventDefault()
+		}
+	</script>
+</html>

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	min-height: calc(100vh - 8rem);
+}
+.success-logo,
+.failure-logo {
+	width: 40vw;
+	height: 30vh;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.success-logo {
+	background-image: url("/success.png");
+}
+.failure-logo {
+	background-image: url("/failure.png");
+}
+.success-text,
+.failure-text {
+	font-family: "Rubik", sans-serif;
+	margin-top: 20px;
+	font-size: 2rem;
+}
+.contact-us {
+	margin-top: 10px;
+	font-family: "Rubik", sans-serif;
+	font-size: 1.5rem;
+	color: #0077b6;
+	user-select: none;
+}
+.contact-us:hover {
+	cursor: pointer;
+}
