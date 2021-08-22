@@ -119,7 +119,7 @@ body {
 		display: none;
 	}
 	.book-pic {
-		background-image: url("/bookimg.png");
+		background-image: url("/bookImg.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
